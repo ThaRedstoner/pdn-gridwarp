@@ -68,9 +68,9 @@ namespace pyrochild.effects.common
             return (byte)val;
         }
 
-        public static ColorBgra ToColorBgra(this HsvColor color)
+        public static ColorBgra ToColorBgra(this PaintDotNet.Imaging.ColorHsv96Float color)
         {
-            // HsvColor contains values scaled as in the color wheel:
+            // PaintDotNet.Imaging.ColorHsv96Float contains values scaled as in the color wheel:
 
             double h;
             double s;

@@ -26,7 +26,7 @@ namespace pyrochild.effects.common
         const float ringradiusratio = 0.75f;
 
         private ColorBgra color;
-        private HsvColor hsvcolor;
+        private PaintDotNet.Imaging.ColorHsv96Float hsvcolor;
 
         public ColorBgra Color
         {
@@ -40,14 +40,14 @@ namespace pyrochild.effects.common
                 if (color != value)
                 {
                     color = value;
-                    hsvcolor = HsvColor.FromColor(color.ToColor());
+                    hsvcolor = PaintDotNet.Imaging.ColorHsv96Float.FromRgb(new PaintDotNet.Imaging.ColorRgb96Float(color.R, color.G, color.B));
                     OnColorChanged();
                     Invalidate();
                 }
             }
         }
 
-        public HsvColor HsvColor
+        public PaintDotNet.Imaging.ColorHsv96Float HsvColor
         {
             get
             {
@@ -180,7 +180,7 @@ namespace pyrochild.effects.common
 
             for (int y = 0; y < sfc.Height; y++)
             {
-                ColorBgra* ptr = sfc.GetRowAddress(y);
+                ColorBgra* ptr = sfc.GetRowPointer(y);
                 float cy = radius - y;
                 float cy2 = cy * cy;
                 for (int x = 0; x < sfc.Width; x++)
@@ -200,7 +200,7 @@ namespace pyrochild.effects.common
                      && r >= innerradius)
                     {
                         //draw the hue ring
-                        *ptr = new HsvColor((int)(theta * radtodeg), 100, 100).ToColorBgra();
+                        *ptr = new PaintDotNet.Imaging.ColorHsv96Float((int)(theta * radtodeg), 100, 100).ToColorBgra();
 
                         //antialias
                         if (radius - r <= 1 && radius - r >= 0)
@@ -220,7 +220,7 @@ namespace pyrochild.effects.common
 
                             int sat = (int)(100 * s);
                             int val = (int)(100 * v);
-                            *ptr = new HsvColor(hsvcolor.Hue, sat, val).ToColorBgra();
+                            *ptr = new PaintDotNet.Imaging.ColorHsv96Float(hsvcolor.Hue, sat, val).ToColorBgra();
 
                             //aa
                             if (tx <= 1 && tx >= 0)

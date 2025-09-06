@@ -380,10 +380,10 @@ namespace pyrochild.effects.gridwarp
 
         public void AddToGridSize(int delta)
         {
-            int newWidth = Int32Util.Clamp(GridWidth + delta, minGridSize, maxGridSize);
+            int newWidth = Math.Clamp(GridWidth + delta, minGridSize, maxGridSize);
             GridWidth = newWidth;
 
-            int newHeight = Int32Util.Clamp(GridHeight + delta, minGridSize, maxGridSize);
+            int newHeight = Math.Clamp(GridHeight + delta, minGridSize, maxGridSize);
             GridHeight = newHeight;
         }
 

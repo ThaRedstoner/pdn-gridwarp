@@ -47,7 +47,7 @@ namespace pyrochild.effects.common
                 try
                 {
                     ColorBgra c = ColorBgra.FromOpaqueInt32(int.Parse(hex.Text, System.Globalization.NumberStyles.HexNumber));
-                    HsvColor h = HsvColor.FromColor(c);
+                    PaintDotNet.Imaging.ColorHsv96Float h = PaintDotNet.Imaging.ColorHsv96Float.FromRgb(new PaintDotNet.Imaging.ColorRgb96Float(c.R, c.G, c.B));
                     wheel.Color = c;
                     SetRgbSliders(c);
                     SetHsvSliders(h);
@@ -96,7 +96,7 @@ namespace pyrochild.effects.common
                 sslider.Value = (float)supdown.Value / 100f;
                 vslider.Value = (float)vupdown.Value / 100f;
 
-                HsvColor h = new HsvColor((int)hupdown.Value, (int)supdown.Value, (int)vupdown.Value);
+                PaintDotNet.Imaging.ColorHsv96Float h = new PaintDotNet.Imaging.ColorHsv96Float((int)hupdown.Value, (int)supdown.Value, (int)vupdown.Value);
                 ColorBgra c = h.ToColorBgra();
                 c.A = (byte)aupdown.Value;
 
@@ -152,7 +152,7 @@ namespace pyrochild.effects.common
                 supdown.Value = s;
                 vupdown.Value = v;
 
-                HsvColor hc = new HsvColor(h, s, v);
+                PaintDotNet.Imaging.ColorHsv96Float hc = new PaintDotNet.Imaging.ColorHsv96Float(h, s, v);
                 ColorBgra c = hc.ToColorBgra();
                 c.A = (byte)aupdown.Value;
 
@@ -198,7 +198,7 @@ namespace pyrochild.effects.common
             {
                 SuspendEvents();
 
-                HsvColor h = wheel.HsvColor;
+                PaintDotNet.Imaging.ColorHsv96Float h = wheel.HsvColor;
                 ColorBgra c = wheel.Color;
 
                 SetRgbSliders(c);
@@ -223,19 +223,19 @@ namespace pyrochild.effects.common
             aupdown.Value = c.A;
         }
 
-        private void SetHsvSliders(HsvColor h)
+        private void SetHsvSliders(PaintDotNet.Imaging.ColorHsv96Float h)
         {
             hslider.Value = h.Hue / 360f;
             sslider.Value = h.Saturation / 100f;
             vslider.Value = h.Value / 100f;
-            hupdown.Value = h.Hue;
-            supdown.Value = h.Saturation;
-            vupdown.Value = h.Value;
+            hupdown.Value = (decimal)h.Hue;
+            supdown.Value = (decimal)h.Saturation;
+            vupdown.Value = (decimal)h.Value;
         }
 
         private void SetSliderGradients()
         {
-            HsvColor h = wheel.HsvColor;
+            PaintDotNet.Imaging.ColorHsv96Float h = wheel.HsvColor;
             ColorBgra c = wheel.Color;
 
             rslider.Gradient = new ColorBgra[] { ColorBgra.FromBgr(c.B, c.G, 0), ColorBgra.FromBgr(c.B, c.G, 255) };
@@ -243,15 +243,15 @@ namespace pyrochild.effects.common
             bslider.Gradient = new ColorBgra[] { ColorBgra.FromBgr(0, c.G, c.R), ColorBgra.FromBgr(255, c.G, c.R) };
             aslider.Gradient = new ColorBgra[] { ColorBgra.FromBgra(c.B, c.G, c.R, 0), ColorBgra.FromBgra(c.B, c.G, c.R, 255) };
 
-            sslider.Gradient = new ColorBgra[] { new HsvColor(h.Hue, 0, h.Value).ToColorBgra(), new HsvColor(h.Hue, 100, h.Value).ToColorBgra() };
-            vslider.Gradient = new ColorBgra[] { new HsvColor(h.Hue, h.Saturation, 0).ToColorBgra(), new HsvColor(h.Hue, h.Saturation, 100).ToColorBgra() };
+            sslider.Gradient = new ColorBgra[] { new PaintDotNet.Imaging.ColorHsv96Float(h.Hue, 0, h.Value).ToColorBgra(), new PaintDotNet.Imaging.ColorHsv96Float(h.Hue, 100, h.Value).ToColorBgra() };
+            vslider.Gradient = new ColorBgra[] { new PaintDotNet.Imaging.ColorHsv96Float(h.Hue, h.Saturation, 0).ToColorBgra(), new PaintDotNet.Imaging.ColorHsv96Float(h.Hue, h.Saturation, 100).ToColorBgra() };
 
             if (hslider.Gradient == null)
             {
                 ColorBgra[] hues = new ColorBgra[361];
                 for (int hue = 0; hue <= 360; ++hue)
                 {
-                    hues[hue] = new HsvColor(hue, 100, 100).ToColorBgra();
+                    hues[hue] = new PaintDotNet.Imaging.ColorHsv96Float(hue, 100, 100).ToColorBgra();
                 }
                 hslider.Gradient = hues;
             }
