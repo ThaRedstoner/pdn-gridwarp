@@ -35,10 +35,10 @@
       <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Base.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Collections">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Collections.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Collections.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.ComponentModel">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.ComponentModel.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.ComponentModel.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Core">
       <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Core.dll</HintPath>
@@ -50,55 +50,55 @@
       <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Effects.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Effects.Core">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Effects.Core.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Effects.Core.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Effects.Gpu">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Effects.Gpu.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Effects.Gpu.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Effects.Legacy">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Effects.Legacy.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Effects.Legacy.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Framework">
-      <HintPath>C:\Program Files\paint.net\PaintDotNet.Framework.dll</HintPath>
+      <HintPath>C:\Program Files\paint.NET\PaintDotNet.Framework.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Fundamentals">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Fundamentals.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Fundamentals.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.ObjectModel">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.ObjectModel.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.ObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Plugins.Compatibility">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Plugins.Compatibility.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Plugins.Compatibility.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Primitives">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Primitives.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.PropertySystem">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.PropertySystem.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.PropertySystem.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Resources">
-      <HintPath>C:\Program Files\paint.net\PaintDotNet.Resources.dll</HintPath>
+      <HintPath>C:\Program Files\paint.NET\PaintDotNet.Resources.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Runtime">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Runtime.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.SystemLayer">
-      <HintPath>C:\Program Files\paint.net\PaintDotNet.SystemLayer.dll</HintPath>
+      <HintPath>C:\Program Files\paint.NET\PaintDotNet.SystemLayer.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Systrace">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Systrace.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Systrace.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.UI">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.UI.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.UI.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Windows">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Windows.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Windows.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Windows.Core">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Windows.Core.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Windows.Core.dll</HintPath>
     </Reference>
     <Reference Include="PaintDotNet.Windows.Framework">
-      <HintPath>..\..\..\..\..\..\Program Files\paint.net\PaintDotNet.Windows.Framework.dll</HintPath>
+      <HintPath>C:\Program Files\Paint.NET\PaintDotNet.Windows.Framework.dll</HintPath>
     </Reference>
     <Reference Update="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
